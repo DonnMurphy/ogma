@@ -3,10 +3,7 @@ pragma solidity >=0.5.0 <0.6.2;
 import "./sheepFactory.sol";
 contract SheepHelper is SheepFactory {
 
-//  function withdraw() external onlyOwner {
-//    address payable _owner = owner();
-//    _owner.transfer(address(this).balance);
-//  }
+
 modifier onlyOwnerOf(uint _sheepId){
   require(msg.sender == sheepToOwner[_sheepId]);
   _;
@@ -23,4 +20,12 @@ modifier onlyOwnerOf(uint _sheepId){
     return result;
   }
 
+  function getSheepById(uint _sheepId) public view returns(string memory, uint, uint, uint, string memory){
+    Sheep memory sheep = sheeps[_sheepId];
+    return (sheep.name, sheep.hp, sheep.dp, sheep.dna, sheep.imageAsset);
+  }
+
+  function getSheepTotal() external view returns (uint){
+    return sheepCount;
+  }
 }
