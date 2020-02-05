@@ -1,11 +1,12 @@
 pragma solidity >=0.5.0 <0.6.2;
 
 //import "https://github.com/OpenZeppelin/openzeppelin-contracts-ethereum-package/blob/master/contracts/math/SafeMath.sol";
-//import "./safemath.sol";
+import "./safemath.sol";
+import "./ownable.sol";
 //import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.3.0/contracts/token/ERC20/ERC20.sol";
 //import "http://raw.githubusercontent.com//OpenZeppelin/openzeppelin-contracts/blob/v2.4.0/contracts/math/SafeMath.sol";
 //import "http://raw.githubusercontent.com//OpenZeppelin/openzeppelin-contracts/blob/v2.4.0/contracts/ownership/Ownable.sol";
-contract SheepFactory {
+contract SheepFactory is Ownable{
 
   // SafeMath for uint256;
   //using SafeMath32 for uint32;
