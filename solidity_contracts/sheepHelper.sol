@@ -1,4 +1,4 @@
-pragma solidity >=0.5.0 <0.6.2;
+pragma solidity ^0.6;
 
 import "./sheepFactory.sol";
 contract SheepHelper is SheepFactory {
@@ -26,6 +26,10 @@ modifier onlyOwnerOf(uint _sheepId){
   }
 
   function getSheepTotal() external view returns (uint){
+    return sheepCount;
+  }
+
+  function findMySheepTotal() external view returns (uint){
     return sheepCount;
   }
 }
