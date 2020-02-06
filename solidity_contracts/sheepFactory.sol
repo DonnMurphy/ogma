@@ -42,7 +42,7 @@ contract SheepFactory{
     return (rand % statModulus) + _statModifier;
   }
 
-  function createRandomShseep(string memory _name) public {
+  function createRandomSheep(string memory _name) public {
     //require(ownerSheepCount[msg.sender] == 0);
     uint randDna = _generateRandomDna(_name);
     uint16 randHp = 2;//_generateRandomStats(_name, 1);
