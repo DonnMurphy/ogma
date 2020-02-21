@@ -1,5 +1,11 @@
 pragma solidity ^0.6;
-
+/**
+ * @title SheepFactory
+ * @dev This Smart Contract Handles the Creation and Mapping's of Sheep Objects
+ * @dev This Smart Contract is based on the Cryptozombies Tutorial Series
+ * @dev https://cryptozombies.io/en/lesson/6
+ * @dev This Code has been modified for the purposes of this project
+ */
 contract SheepFactory{
 
   event NewSheep(uint sheepId, string name, uint dna, uint hp, uint dp, string imageAsset);

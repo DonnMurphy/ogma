@@ -1,5 +1,11 @@
 pragma solidity ^0.6;
-
+/**
+ * @title SheepHelper
+ * @dev This Smart Contract Handles the Methods relating to Sheep Structures
+ * @dev This Smart Contract is based on the Cryptozombies Tutorial Series
+ * @dev https://cryptozombies.io/en/lesson/6
+ * @dev This Code has been modified for the purposes of this project
+ */
 import "./sheepFactory.sol";
 contract SheepHelper is SheepFactory {
 
